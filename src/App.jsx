@@ -2,6 +2,7 @@ import Welcome from "./components/Welcome"
 import Clock from "./components/Clock";
 import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
+import Form from "./components/Form";
 
 function App() {
   const userInfo = {
@@ -32,7 +33,8 @@ function App() {
     {/* <Clock /> */}
      {/* <Welcome user={userInfo}/> */}
      {/* <LoginControl /> */}
-     <Blog Post={Post}/>
+     {/* <Blog Post={Post}/> */}
+     <Form />
     </>
   )
 };
