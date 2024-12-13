@@ -13,6 +13,7 @@ function Form() {
     function submitHandler(e) {
         e.preventDefault();
         alert(JSON.stringify(formData, undefined, 2))
+        console.log(formData)
     }
     return (
         <form onSubmit={submitHandler}>
