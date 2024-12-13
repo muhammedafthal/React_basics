@@ -1,5 +1,6 @@
 import Welcome from "./components/Welcome"
 import Clock from "./components/Clock";
+import LoginControl from "./components/LoginControl";
 
 function App() {
   const userInfo = {
@@ -8,8 +9,9 @@ function App() {
   };
   return (
     <>
-    <Clock />
+    {/* <Clock /> */}
      {/* <Welcome user={userInfo}/> */}
+     <LoginControl />
     </>
   )
 };
