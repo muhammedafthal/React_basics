@@ -5,6 +5,7 @@ import Blog from "./components/Blog";
 import Form from "./components/Form";
 import Search from "./components/Search";
 import List from "./components/List";
+import WelcomeDialog from "./components/WelcomeDialog";
 import { useState } from "react";
 
 
@@ -66,8 +67,9 @@ function App() {
      {/* <LoginControl /> */}
      {/* <Blog Post={Post}/> */}
      {/* <Form /> */}
-     <Search searchTerm={searchTerm} handleSearch={handleSearch}/>
-     <List list={filterList}/>
+     {/* <Search searchTerm={searchTerm} handleSearch={handleSearch}/>
+     <List list={filterList}/> */}
+     <WelcomeDialog />
     </>
   )
 };
