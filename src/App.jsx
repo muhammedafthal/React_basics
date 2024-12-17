@@ -4,9 +4,13 @@ import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
 import Form from "./components/Form";
 import Search from "./components/Search";
-import List from "./components/List";
 import WelcomeDialog from "./components/WelcomeDialog";
 import { useState } from "react";
+import Label from "./List/Label"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import List from "./List/List";
+
 
 
 function App() {
@@ -69,7 +73,12 @@ function App() {
      {/* <Form /> */}
      {/* <Search searchTerm={searchTerm} handleSearch={handleSearch}/>
      <List list={filterList}/> */}
-     <WelcomeDialog />
+     {/* <WelcomeDialog /> */}
+      <Header />
+      <div className="app-body">
+        <List />
+      </div>
+      <Footer />
     </>
   )
 };
