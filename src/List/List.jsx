@@ -1,5 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem";
+import Tools from "../components/Tools";
 
 const arr = [
     {
@@ -24,13 +25,15 @@ const arr = [
 class List extends React.Component {
     render() {
         return(
+        <Tools>
             <div className="app-list">
                 {
                     arr.map((obj) => {
                        return <ListItem title={obj.title} descr={obj.descr} isActive={obj.isActive}/>
                     })
                 }
-        </div>
+            </div>
+        </Tools>
         );
     }
 };
