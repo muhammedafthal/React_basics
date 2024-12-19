@@ -1,20 +1,20 @@
 import { useState } from "react";
 
-function Form() {
+const Form = () => {
     const initialValue = {
         Name: "",
         Email: "",
         Password: ""
     };
-    function submitHandler() {
-
-    }
+  
     const [formData, setFormData] = useState(initialValue);
+
     function submitHandler(e) {
         e.preventDefault();
         alert(JSON.stringify(formData, undefined, 2))
         console.log(formData)
     }
+    
     return (
         <form onSubmit={submitHandler}>
             <label>Name</label>

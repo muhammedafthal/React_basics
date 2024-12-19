@@ -6,10 +6,14 @@ import Form from "./components/Form";
 import Search from "./components/Search";
 import WelcomeDialog from "./components/WelcomeDialog";
 import { useState } from "react";
-import Label from "./List/Label"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import List from "./List/List";
+import Counter from "./components/Counter";
+import ArrayProps from "./components/ArrayProps";
+import Toggle from "./components/Toggle";
+import AddNew from "./components/AddNew";
+
 
 
 
@@ -60,6 +64,8 @@ function App() {
     }
   ];
 
+  const fruits = ["apple", "banana", "orange"];
+
   const filterList = Post.filter((item) => {
     return item.title.toLocaleLowerCase().includes(searchTerm)
   });
@@ -74,11 +80,15 @@ function App() {
      {/* <Search searchTerm={searchTerm} handleSearch={handleSearch}/>
      <List list={filterList}/> */}
      {/* <WelcomeDialog /> */}
-      <Header />
+      {/* <Header />
       <div className="app-body">
         <List />
       </div>
-      <Footer />
+      <Footer /> */}
+      {/* <Counter /> */}
+      {/* <ArrayProps fruitList={fruits} /> */}
+      {/* <Toggle /> */}
+      <AddNew />
     </>
   )
 };
