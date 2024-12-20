@@ -10,10 +10,12 @@ class AddNew extends React.Component {
     }
 
     handleChange = (e) => {
+        
         const value = e.target.value;
         this.setState({
             titleInput: value
         });
+        e.preventDefault()
     };
 
     handleClick = () => {
@@ -23,7 +25,7 @@ class AddNew extends React.Component {
     render() {
         return (
             <div className="add-new">
-                <input onChange={this.handleChange} />
+                <input value={this.state.titleInput} onChange={this.handleChange} />
                 <button onClick={this.handleClick}>Click</button>
             </div>
         )

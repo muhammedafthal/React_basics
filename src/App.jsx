@@ -13,6 +13,9 @@ import Counter from "./components/Counter";
 import ArrayProps from "./components/ArrayProps";
 import Toggle from "./components/Toggle";
 import AddNew from "./components/AddNew";
+import UsageCounter from "./components/UsageCounter";
+import Movies from "./components/Movies";
+import Switch from "./components/Switch";
 
 
 
@@ -70,6 +73,8 @@ function App() {
     return item.title.toLocaleLowerCase().includes(searchTerm)
   });
 
+  const arr = ["KannurSquad", "Dhrishyam", "KGF", "Marco", "Qalb"];
+
   return (
     <>
     {/* <Clock /> */}
@@ -88,7 +93,10 @@ function App() {
       {/* <Counter /> */}
       {/* <ArrayProps fruitList={fruits} /> */}
       {/* <Toggle /> */}
-      <AddNew />
+      {/* <AddNew /> */}
+      {/* <UsageCounter /> */}
+      {/* <Movies list={arr}/> */}
+      <Switch />
     </>
   )
 };
