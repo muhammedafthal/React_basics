@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Switch() {
    const [value, setVlaue] = useState(0);
    const [color, setColor] = useState('white');
+   const [boom, setBoom] = useState(false);
+
+    useEffect(() => {
+        setBoom(false);
+       const id = setTimeout(() => {
+            setBoom(true)
+        }, value * 1000);
+        return(() => {
+            clearTimeout(id);
+            
+        })
+        
+    }, [value])
 
    return(
+    <div className="usage">
     <div style={{ background : color, width : '100px'}}>
 
         <button onClick={() => {
@@ -26,9 +40,21 @@ function Switch() {
         }}>GREEN</button>
 
     </div>
-  
-   )
-}
+    <div>
+        {
+            boom && value ? (
+                <div>
+                    <span>
+                        BOOM
+                    </span>
+                </div>
+            ) : null
+        }
+    </div>
+    </div>  
+
+   );
+};
 
 
 

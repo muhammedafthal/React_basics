@@ -1,35 +1,53 @@
+import React from "react";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Welcome from "./components/Welcome"
 import Clock from "./components/Clock";
 import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
+
 import Form from "./components/Form";
 import Search from "./components/Search";
 import WelcomeDialog from "./components/WelcomeDialog";
-import { useState } from "react";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import List from "./List/List";
+
 import Counter from "./components/Counter";
 import ArrayProps from "./components/ArrayProps";
 import Toggle from "./components/Toggle";
 import AddNew from "./components/AddNew";
 import UsageCounter from "./components/UsageCounter";
+
 import Movies from "./components/Movies";
 import Switch from "./components/Switch";
+
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Settings from "./pages/Settings";
 
 
 
 
 function App() {
+
   const userInfo = {
     firstname: "Muhammed",
     lastname: "Afthal"
   };
+
   const [searchTerm, setSearchTerm] = useState("");
+
   const handleSearch = (e) => {
     setSearchTerm(e.target.value)
   };
+
   const Post = [
+
     {
       id:1,
       title:"Hello World",
@@ -78,25 +96,50 @@ function App() {
   return (
     <>
     {/* <Clock /> */}
+
      {/* <Welcome user={userInfo}/> */}
+
      {/* <LoginControl /> */}
+
      {/* <Blog Post={Post}/> */}
+
      {/* <Form /> */}
+
      {/* <Search searchTerm={searchTerm} handleSearch={handleSearch}/>
      <List list={filterList}/> */}
+
      {/* <WelcomeDialog /> */}
+
       {/* <Header />
       <div className="app-body">
         <List />
       </div>
       <Footer /> */}
+
       {/* <Counter /> */}
+
       {/* <ArrayProps fruitList={fruits} /> */}
+
       {/* <Toggle /> */}
+
       {/* <AddNew /> */}
+
       {/* <UsageCounter /> */}
+
       {/* <Movies list={arr}/> */}
+
       <Switch />
+
+      {/* <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/settings" element={<Settings />} /> 
+      </Routes>
+    </Router> */}
+
     </>
   )
 };
