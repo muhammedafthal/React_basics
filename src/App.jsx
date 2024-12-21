@@ -110,11 +110,11 @@ function App() {
 
      {/* <WelcomeDialog /> */}
 
-      {/* <Header />
+      <Header />
       <div className="app-body">
         <List />
       </div>
-      <Footer /> */}
+      <Footer />
 
       {/* <Counter /> */}
 
@@ -128,7 +128,7 @@ function App() {
 
       {/* <Movies list={arr}/> */}
 
-      <Switch />
+      {/* <Switch /> */}
 
       {/* <Router>
       <Navbar />

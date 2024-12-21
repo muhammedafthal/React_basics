@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Label.css"
+import { MyContext  } from "./List";
 
 //CLASS COMPONENT
-class Label extends React.Component {
-    render() {
-        const props = this.props;
-        const style = props.isActive ? {background: 'green'} : {background: 'orange'}
-        return <span className="list-label-item" style={style}>{props.isActive ? 'Active' : 'Non Active'}</span>
+function Label(props) {
+
+    const val = useContext(MyContext);    
+    const style = props.isActive ? {background: 'green'} : {background: 'orange'}
+
+    if(val === false) {
+        return null;
     }
+
+    return (
+        <span className="list-label-item" style={style}>{props.isActive ? 'Active' : 'Non Active'}</span>
+    )
 }
 
 export default Label;

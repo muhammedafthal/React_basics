@@ -20,13 +20,16 @@ const arr = [
     }
 ];
 
+const MyContext = React.createContext();
+
 
 //CLASS COMPONENT
 class List extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: arr
+            data: arr,
+            showLabel : true
         }
     };
 
@@ -52,10 +55,17 @@ class List extends React.Component {
         });
     }
 
-    render() {
-        console.log("RENDER");
-        
+    handleShowLAbel = (e) => {
+        this.setState({
+            showLabel : e.target.checked
+        });
+    }
+
+    render() {      
         return(
+        <div>
+            <input checked={this.state.showLabel} onChange={this.handleShowLAbel} type="checkbox"></input>ShowLabel
+        <MyContext.Provider value={this.state.showLabel}>
         <Tools onAction={this.onListChange}>
             <div className="app-list">
                 {
@@ -65,8 +75,12 @@ class List extends React.Component {
                 }
             </div>
         </Tools>
+        </MyContext.Provider>
+        </div>
         );
     }
 };
 
 export default List;
+
+export { MyContext };
