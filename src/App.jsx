@@ -33,6 +33,7 @@ import Settings from "./pages/Settings";
 import ShowHide from "./components/ShowHide";
 
 import Profile from "./Container/Profile";
+import { AppContext } from "./AppContext";
 
 function App() {
   const userInfo = {
@@ -41,6 +42,8 @@ function App() {
   };
 
   const [searchTerm, setSearchTerm] = useState("");
+
+  const [state, setState] = useState(55)
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -95,12 +98,18 @@ function App() {
   return (
     <>
       {/* <Clock /> */}
+
       {/* <Welcome user={userInfo}/> */}
+
       {/* <LoginControl /> */}
+
       {/* <Blog Post={Post}/> */}
+
       {/* <Form /> */}
+
       {/* <Search searchTerm={searchTerm} handleSearch={handleSearch}/>
      <List list={filterList}/> */}
+
       {/* <WelcomeDialog /> */}
 
       {/* <Header />
@@ -110,12 +119,19 @@ function App() {
       <Footer /> */}
 
       {/* <Counter /> */}
+
       {/* <ArrayProps fruitList={fruits} /> */}
+
       {/* <Toggle /> */}
+
       {/* <AddNew /> */}
+      
       {/* <UsageCounter /> */}
+      
       {/* <Movies list={arr}/> */}
+      
       {/* <Switch /> */}
+
       {/* <Router>
         <Navbar />
         <Routes>
@@ -125,13 +141,16 @@ function App() {
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </Router> */}
+
       {/* <ShowHide /> */}
+    <AppContext.Provider value={{data: state}}>
+      <Router>   
+      <Routes>
+      <Route path="/profile" element={<Profile />}/>
+      </Routes>
+      </Router>
+    </AppContext.Provider>
      
-     <Router>   
-     <Routes>
-     <Route path="/profile" Component={Profile} />
-     </Routes>
-     </Router>
     </>
   );
 }
