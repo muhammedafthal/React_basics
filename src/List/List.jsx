@@ -22,7 +22,6 @@ const arr = [
 
 const MyContext = React.createContext();
 
-
 //CLASS COMPONENT
 class List extends React.Component {
     constructor(props) {
